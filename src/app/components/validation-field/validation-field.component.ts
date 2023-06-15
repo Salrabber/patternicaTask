@@ -13,7 +13,7 @@ export class ValidationFieldComponent implements OnInit {
   getPasswordStrength(password: string): string {
     const hasLetters = /[a-zA-Zа-яА-ЯіІїЇєЄґҐ]/.test(password);
     const hasDigits = /\d/.test(password);
-    const hasSymbols = /[!@#$%^&*()_\-+:;]/.test(password);
+    const hasSymbols = /[~!@#$%^&*"№()_\-+:;?{}`/]/.test(password);
 
     let strength: string = '';
 
